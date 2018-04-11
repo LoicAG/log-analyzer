@@ -1,0 +1,4 @@
+{
+  "logFile": "../log-generator/access.log",
+  "interval": 10
+}
