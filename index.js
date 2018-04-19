@@ -29,10 +29,8 @@ function analyze() {
 
   var tail = new Tail(config.logFile);
   tail.on('line', function(logEntry) {
-    //console.log('New entry written to log: ' + logEntry);
     var urlPath = logEntry.split(' ')[6];
     var section = urlPath.split('/')[1];
-    //console.log('Parsed section: ' + section);
     if (metrics.sections[section]) {
       metrics.sections[section]++;
     }
