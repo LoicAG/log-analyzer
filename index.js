@@ -5,7 +5,8 @@ module.exports = {
 var config = require('./config.json');
 
 var metrics = {
-  sections: {}
+  sections: {},
+  totalHits: 0
 };
 
 
@@ -25,12 +26,14 @@ function analyze() {
     else {
       metrics.sections[section] = 1;
     }
+    metrics.totalHits++;
   });
 
   setTimeout(writeMetrics, config.interval * 1000);
 }
 
 function writeMetrics() {
+  //TODO prettier metrics output
   console.log(metrics);
   setTimeout(writeMetrics, config.interval * 1000);
 }
