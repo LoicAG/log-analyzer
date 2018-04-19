@@ -1,4 +1,10 @@
 {
   "logFile": "../log-generator/access.log",
-  "interval": 10
+  "display": {
+    "interval": 10
+  },
+  "alert": {
+    "interval": 120,
+    "threshold": 10000
+  }
 }
