@@ -56,11 +56,11 @@ function writeMetrics() {
 }
 
 function updateAlertWindow() {
-  var hitsOverWindow = metrics.alertWindow.reduce(function(a, b) { return a + b;}, 0);
+  var hitsOverWindow = metrics.alertWindow.reduce(function(a, b) {return a + b;}, 0);
 
   metrics.hitsOverWindow = hitsOverWindow;
 
-  if (hitsOverWindow >= config.alert.threshold && ! metrics.alerting) {
+  if (hitsOverWindow >= config.alert.threshold && !metrics.alerting) {
     console.log(
         'ALERT More than ' + config.alert.threshold +
         ' hits ' + '(' + hitsOverWindow + ')' +
