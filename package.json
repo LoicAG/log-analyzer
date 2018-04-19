@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "analyze": "node analyze.js",
+    "start": "node analyze.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Loic Antoine-Gombeaud",
